@@ -4,9 +4,11 @@ import Header from "./Header";
 function MainLayout(props: { children: React.ReactNode }) {
   return (
     <>
-      <Header />
-      <div>{props.children}</div>
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <div className="grow-1">{props.children}</div>
+        <Footer />
+      </div>
     </>
   );
 }
